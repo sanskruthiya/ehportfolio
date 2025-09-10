@@ -1,0 +1,120 @@
+{
+  "personal": {
+    "name": "Eita Horishita",
+    "name_japanese": "堀下 栄太",
+    "birth_date": "July 19, 1985",
+    "current_position": "Technical Research Expert",
+    "current_company": "VALUENEX Japan",
+    "location": "Japan",
+    "github": "https://github.com/sanskruthiya",
+    "linkedin": "https://www.linkedin.com/in/eita-horishita-2b8a605a/"
+  },
+  "work_experience": [
+    {
+      "id": 1,
+      "company": "VALUENEX Japan",
+      "position": "Technical Research Expert",
+      "department": "Business Design Office Leader & International Business Development Office Member",
+      "period": "October 2018 - Present",
+      "description": "Conduct technology trend analysis using natural language processing for document visualization. Provide consulting services to private companies' R&D and IP departments for technology assessment, whitespace exploration, and startup research. Analyze social needs through review sites, SNS, and workshop comments. Implement data preprocessing, web scraping, document vectorization, and dimensionality reduction using Python, along with data visualization using QGIS/JavaScript.",
+      "skills": ["Python", "Natural Language Processing", "Data Visualization", "QGIS", "JavaScript", "Technology Analysis"]
+    },
+    {
+      "id": 2,
+      "company": "Kokusai Kogyo Co., Ltd.",
+      "position": "Senior Consultant",
+      "department": "International Headquarters, Urban Planning Team",
+      "period": "November 2014 - August 2018",
+      "description": "Provided strategic, policy, and technical consulting on spatial information infrastructure (GIS/NSDI) in Ukraine and Rwanda. Conducted policy and technical consulting on urban planning in Japan and Papua New Guinea. Supported Japanese SME overseas expansion in Sri Lanka and East Timor. Conducted advanced case studies on spatial information in Japan and consulting on integrated GIS introduction and operation for local governments.",
+      "skills": ["GIS", "Urban Planning", "International Development", "Policy Consulting", "Project Management"]
+    },
+    {
+      "id": 3,
+      "company": "Japan Fair Trade Commission",
+      "position": "Project Manager",
+      "department": "High Value-Added Coffee Production Project",
+      "period": "September 2012 - August 2013",
+      "description": "Managed social business planning and execution in Sri Lankan rural areas. Improved coffee quality for individual farmers while building business models including company establishment, store opening for coffee export and sales. Conducted research on local coffee conditions (history, varieties, production areas, processing technology) with government cooperation.",
+      "skills": ["Project Management", "Social Business", "Agricultural Development", "Market Research"]
+    },
+    {
+      "id": 4,
+      "company": "JICA Japan Overseas Cooperation Volunteers",
+      "position": "Community Development Volunteer",
+      "department": "Village Development Extension Agent, OVOP Promotion Project",
+      "period": "April 2010 - June 2012",
+      "location": "Sri Lanka",
+      "description": "Engaged in community development activities for 26 months as part of the One Village One Product (OVOP) promotion project.",
+      "skills": ["Community Development", "Cross-cultural Communication", "Rural Development"]
+    },
+    {
+      "id": 5,
+      "company": "International Development Consultants Co., Ltd.",
+      "position": "Urban Planning Consultant",
+      "department": "Planning and Design Department, Urban Development Group",
+      "period": "April 2008 - March 2010",
+      "description": "Specialized in urban planning consulting for Japanese local governments. Handled urban plan revisions, legal document preparation, urban planning master plan surveys, land readjustment project design, urban redevelopment project planning, and citizen participation workshop management. Worked with municipalities including Tokyo's 23 wards, Yokohama, Saku, Kashiwa, and Utsunomiya.",
+      "skills": ["Urban Planning", "GIS", "AutoCAD", "Illustrator", "Community Engagement", "Legal Documentation"]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of Birmingham",
+      "degree": "MSc International Development (with Merit)",
+      "location": "United Kingdom",
+      "period": "September 2013 - October 2014",
+      "description": "Specialized in international development with focus on spatial information systems and urban planning in developing countries."
+    },
+    {
+      "id": 2,
+      "institution": "Chiba University",
+      "degree": "Bachelor of Engineering in Urban Environmental Systems",
+      "location": "Japan",
+      "period": "April 2004 - March 2008",
+      "description": "Studied urban environmental systems engineering with focus on infrastructure planning and environmental management."
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "JavaScript", "SvelteKit", "QGIS", "ArcGIS", "MS Office", "AutoCAD", "Illustrator"],
+    "languages": [
+      {
+        "language": "Japanese",
+        "level": "Native"
+      },
+      {
+        "language": "English",
+        "level": "Business Level",
+        "certifications": ["TOEIC 935 (2017)", "IELTS 7.0 (2019)"],
+        "experience": "Document analysis, email correspondence, presentations, official document preparation"
+      },
+      {
+        "language": "Sinhala",
+        "level": "Business Level",
+        "experience": "Presentations, interpretation, negotiations in coffee business development"
+      }
+    ],
+    "specialties": [
+      "GIS and Geospatial Information Technology",
+      "Natural Language Processing for Document Analysis",
+      "International Development Technical and Policy Support",
+      "Government ODA Project Planning and Proposals",
+      "Urban Planning Documentation",
+      "Data Visualization and Design"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "Driver's License (Class 1)",
+      "date": "September 2006"
+    },
+    {
+      "name": "FASID PCM (Planning, Evaluation & Monitoring)",
+      "date": "June 2016"
+    },
+    {
+      "name": "Professional Engineer (Information Engineering)",
+      "date": "November 2017"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "publications": [
+    {
+      "id": 1,
+      "title": "自然言語処理とFOSS4Gの融合 – 文書マッピングの紹介",
+      "type": "conference_presentation",
+      "venue": "FOSS4G国際会議 2019",
+      "location": "ブカレスト、ルーマニア",
+      "date": "2019年8月",
+      "description": "自然言語処理とオープンソース地理空間技術を組み合わせた文書可視化・分析の新しいアプローチを発表。",
+      "links": {
+        "conference": "https://2019.foss4g.org/",
+        "slides": "#",
+        "video": "#"
+      },
+      "tags": ["自然言語処理", "FOSS4G", "文書分析", "地理空間技術"],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "開発途上国における空間データ基盤の実装：ウクライナとルワンダからの教訓",
+      "type": "technical_report",
+      "venue": "世界銀行ナレッジソースブック",
+      "date": "2018年3月",
+      "description": "ウクライナとルワンダプロジェクトでの現場経験に基づく空間データ基盤実装の課題と解決策の包括的分析。",
+      "links": {
+        "pdf": "#",
+        "worldbank": "#"
+      },
+      "tags": ["空間データ基盤", "国際開発", "GIS", "政策"],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "都市開発戦略：横浜モデル",
+      "type": "case_study",
+      "venue": "世界銀行ナレッジソースブック",
+      "date": "2017年12月",
+      "description": "横浜の都市開発アプローチのケーススタディ分析と他の発展途上都市地域への適用可能性。",
+      "links": {
+        "pdf": "#",
+        "worldbank": "#"
+      },
+      "tags": ["都市計画", "ケーススタディ", "開発戦略"],
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "スリランカにおけるコミュニティベースコーヒー生産システム",
+      "type": "research_paper",
+      "venue": "国際農業開発ジャーナル",
+      "date": "2013年9月",
+      "description": "スリランカ中央高地における持続可能なコーヒー生産モデルと農村コミュニティ開発への影響に関する研究。",
+      "links": {
+        "pdf": "#",
+        "journal": "#"
+      },
+      "tags": ["農業開発", "コミュニティ開発", "持続可能性"],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "開発途上国におけるGISアプリケーション：課題と機会",
+      "type": "conference_paper",
+      "venue": "地理情報学国際会議",
+      "date": "2015年6月",
+      "description": "開発途上国でのGIS実装課題の分析と現場経験に基づく提案された解決策。",
+      "links": {
+        "pdf": "#",
+        "conference": "#"
+      },
+      "tags": ["GIS", "開発途上国", "技術移転"],
+      "featured": false
+    }
+  ]
+}

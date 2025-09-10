@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "自然言語処理による文書マッピング",
+      "description": "自然言語処理を用いて文書間の関係性を2次元マッピングで可視化するアプリケーション。FOSS4G技術とテキスト分析を組み合わせた空間的文書可視化システム。",
+      "technologies": ["Python", "自然言語処理", "QGIS", "JavaScript", "データ可視化"],
+      "status": "completed",
+      "year": "2019",
+      "links": {
+        "demo": "#",
+        "github": "#",
+        "presentation": "https://2019.foss4g.org/"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "GISベース都市計画ツール",
+      "description": "地理空間データを活用した都市計画分析のためのオープンソースWebアプリケーション。インタラクティブマッピング機能により自治体の計画プロセスを支援。",
+      "technologies": ["JavaScript", "QGIS", "PostGIS", "Leaflet", "Python"],
+      "status": "in_progress",
+      "year": "2023",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "コーヒーサプライチェーン追跡システム",
+      "description": "スリランカの農家から消費者までのコーヒーサプライチェーンを追跡するブロックチェーンベースアプリケーション。フェアトレード実践を確保するソーシャルビジネスプロジェクトで開発。",
+      "technologies": ["Node.js", "React", "ブロックチェーン", "MongoDB"],
+      "status": "completed",
+      "year": "2013",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "空間データ基盤ツールキット",
+      "description": "開発途上国が空間データ基盤を実装するための包括的ツールキット。ウクライナとルワンダプロジェクトでの経験に基づいて作成。",
+      "technologies": ["Python", "QGIS", "PostgreSQL", "Docker"],
+      "status": "completed",
+      "year": "2018",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": false
+    }
+  ]
+}

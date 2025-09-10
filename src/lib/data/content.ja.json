@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "about": "プロフィール",
+    "experience": "経歴",
+    "projects": "プロジェクト",
+    "publications": "発表・論文",
+    "contact": "お問い合わせ"
+  },
+  "about": {
+    "title": "プロフィール",
+    "name": "堀下 栄太",
+    "role": "技術調査エキスパート",
+    "company": "VALUENEX Japan",
+    "introduction": "自然言語処理と地理空間情報解析を専門とする技術調査エキスパートです。国際開発と技術コンサルティングの豊富な経験を活かし、組織がデータ可視化と分析を戦略的意思決定に活用できるよう支援しています。",
+    "brief_history": "千葉大学工学部都市環境システム学科を卒業後、JICA青年海外協力隊プログラムを通じてスリランカで国際経験を積みました。その後、英国バーミンガム大学で国際開発学修士号を取得。現在はVALUENEX Japanで技術動向分析と民間企業向けコンサルティング業務に従事しています。",
+    "github_url": "https://github.com/sanskruthiya",
+    "linkedin_url": "https://www.linkedin.com/in/eita-horishita-2b8a605a/"
+  },
+  "experience": {
+    "title": "経歴",
+    "work_experience": "職歴",
+    "education": "学歴",
+    "skills": "技術スキル",
+    "languages": "語学",
+    "certifications": "資格・免許"
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "subtitle": "個人プロジェクトとオープンソース貢献"
+  },
+  "publications": {
+    "title": "発表・論文",
+    "subtitle": "研究発表と論文"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "お気軽にご連絡ください",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "send": "送信"
+    }
+  },
+  "common": {
+    "present": "現在",
+    "view_project": "プロジェクトを見る",
+    "read_more": "詳細を見る",
+    "download_cv": "履歴書をダウンロード"
+  }
+}

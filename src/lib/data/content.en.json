@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Eita Horishita",
+    "role": "Technical Research Expert",
+    "company": "VALUENEX Japan",
+    "introduction": "I am a technical research expert specializing in natural language processing and geospatial information analysis. With extensive experience in international development and technology consulting, I help organizations leverage data visualization and analysis for strategic decision-making.",
+    "brief_history": "After graduating from Chiba University with a degree in Urban Environmental Systems, I gained international experience through JICA's Japan Overseas Cooperation Volunteers program in Sri Lanka. I later earned an MSc in International Development from the University of Birmingham, UK. Currently, I work at VALUENEX Japan, where I conduct technology trend analysis and provide consulting services to private companies.",
+    "github_url": "https://github.com/sanskruthiya",
+    "linkedin_url": "https://www.linkedin.com/in/eita-horishita-2b8a605a/"
+  },
+  "experience": {
+    "title": "Experience",
+    "work_experience": "Work Experience",
+    "education": "Education",
+    "skills": "Technical Skills",
+    "languages": "Languages",
+    "certifications": "Certifications"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Personal projects and open source contributions"
+  },
+  "publications": {
+    "title": "Publications",
+    "subtitle": "Research presentations and publications"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "common": {
+    "present": "Present",
+    "view_project": "View Project",
+    "read_more": "Read More",
+    "download_cv": "Download CV"
+  }
+}

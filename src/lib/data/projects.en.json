@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Document Mapping with NLP",
+      "description": "A natural language processing application that visualizes document relationships through 2D mapping. Combines FOSS4G technologies with text analysis for spatial document visualization.",
+      "technologies": ["Python", "Natural Language Processing", "QGIS", "JavaScript", "Data Visualization"],
+      "status": "completed",
+      "year": "2019",
+      "links": {
+        "demo": "#",
+        "github": "#",
+        "presentation": "https://2019.foss4g.org/"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "GIS-based Urban Planning Tool",
+      "description": "An open-source web application for urban planning analysis using geospatial data. Developed for supporting municipal planning processes with interactive mapping capabilities.",
+      "technologies": ["JavaScript", "QGIS", "PostGIS", "Leaflet", "Python"],
+      "status": "in_progress",
+      "year": "2023",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Coffee Supply Chain Tracker",
+      "description": "A blockchain-based application for tracking coffee supply chain from Sri Lankan farmers to consumers. Developed during social business project to ensure fair trade practices.",
+      "technologies": ["Node.js", "React", "Blockchain", "MongoDB"],
+      "status": "completed",
+      "year": "2013",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Spatial Data Infrastructure Toolkit",
+      "description": "A comprehensive toolkit for developing countries to implement spatial data infrastructure. Created based on experience from Ukraine and Rwanda projects.",
+      "technologies": ["Python", "QGIS", "PostgreSQL", "Docker"],
+      "status": "completed",
+      "year": "2018",
+      "links": {
+        "demo": "#",
+        "github": "#"
+      },
+      "image": "/api/placeholder/400/250",
+      "featured": false
+    }
+  ]
+}
