@@ -14,6 +14,7 @@
 	};
 
 	let currentPath = '';
+	let isMobileMenuOpen = false;
 
 	onMount(async () => {
 		theme.init();
@@ -39,6 +40,14 @@
 
 	function toggleLanguage() {
 		language.toggle();
+	}
+
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+	}
+
+	function closeMobileMenu() {
+		isMobileMenuOpen = false;
 	}
 
 	$: isDark = $theme === 'dark';
@@ -131,35 +140,67 @@
 
 				<!-- Mobile menu button -->
 				<button
+					on:click={toggleMobileMenu}
 					class="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-					aria-label="Open menu"
+					aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+					aria-expanded={isMobileMenuOpen}
 				>
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-					</svg>
+					{#if isMobileMenuOpen}
+						<!-- Close icon (X) -->
+						<svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					{:else}
+						<!-- Hamburger icon -->
+						<svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					{/if}
 				</button>
 			</div>
 		</div>
 
-		<!-- Mobile Navigation (hidden by default, can be toggled) -->
-		<div class="md:hidden">
-			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-				<a href="/" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-					{navigationContent.about}
-				</a>
-				<a href="/experience" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-					{navigationContent.experience}
-				</a>
-				<a href="/projects" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-					{navigationContent.projects}
-				</a>
-				<a href="/publications" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-					{navigationContent.publications}
-				</a>
-				<a href="/contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-					{navigationContent.contact}
-				</a>
+		<!-- Mobile Navigation (toggleable) -->
+		{#if isMobileMenuOpen}
+			<div class="md:hidden animate-in slide-in-from-top-2 duration-200">
+				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
+					<a 
+						href="/" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.about}
+					</a>
+					<a 
+						href="/experience" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/experience' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.experience}
+					</a>
+					<a 
+						href="/projects" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/projects' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.projects}
+					</a>
+					<a 
+						href="/publications" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/publications' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.publications}
+					</a>
+					<a 
+						href="/contact" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/contact' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.contact}
+					</a>
+				</div>
 			</div>
-		</div>
+		{/if}
 	</nav>
 </header>
