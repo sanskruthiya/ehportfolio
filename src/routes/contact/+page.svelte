@@ -12,7 +12,11 @@
 			email: 'Email',
 			subject: 'Subject',
 			message: 'Message',
-			send: 'Send Message'
+			send: 'Send Message',
+			sending: 'Sending...',
+			success: 'Thank you for your message! I\'ll get back to you soon.',
+			error: 'Sorry, there was an error sending your message. Please try again.',
+			response_time: 'I typically respond within 24 hours.'
 		}
 	};
 
@@ -25,6 +29,10 @@
 
 	let isSubmitting = false;
 	let submitMessage = '';
+	let submitStatus: 'success' | 'error' | '' = '';
+
+	// Formspree form ID
+	const FORMSPREE_FORM_ID = 'mpwjnvdr';
 
 	onMount(async () => {
 		// Load content based on current language
@@ -41,27 +49,52 @@
 	async function handleSubmit(event: Event) {
 		event.preventDefault();
 		isSubmitting = true;
+		submitMessage = '';
+		submitStatus = '';
 		
-		// Simulate form submission (replace with actual form service like Formspree)
 		try {
-			// For now, just show a success message
-			await new Promise(resolve => setTimeout(resolve, 1000));
-			submitMessage = 'Thank you for your message! I\'ll get back to you soon.';
-			
-			// Reset form
-			formData = {
-				name: '',
-				email: '',
-				subject: '',
-				message: ''
-			};
+			const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					subject: formData.subject,
+					message: formData.message,
+					_replyto: formData.email,
+					_subject: `Portfolio Contact: ${formData.subject}`
+				})
+			});
+
+			if (response.ok) {
+				submitStatus = 'success';
+				submitMessage = $language === 'ja' 
+					? contactContent.form.success
+					: contactContent.form.success;
+				
+				// Reset form
+				formData = {
+					name: '',
+					email: '',
+					subject: '',
+					message: ''
+				};
+			} else {
+				throw new Error('Form submission failed');
+			}
 		} catch (error) {
-			submitMessage = 'Sorry, there was an error sending your message. Please try again.';
+			submitStatus = 'error';
+			submitMessage = $language === 'ja'
+				? contactContent.form.error
+				: contactContent.form.error;
 		} finally {
 			isSubmitting = false;
 			// Clear message after 5 seconds
 			setTimeout(() => {
 				submitMessage = '';
+				submitStatus = '';
 			}, 5000);
 		}
 	}
@@ -210,7 +243,7 @@
 				</h2>
 				
 				{#if submitMessage}
-					<div class="mb-6 p-4 rounded-md {submitMessage.includes('error') ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200' : 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200'}">
+					<div class="mb-6 p-4 rounded-md {submitStatus === 'error' ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200' : 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200'}">
 						{submitMessage}
 					</div>
 				{/if}
@@ -284,7 +317,7 @@
 								<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 								<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
 							</svg>
-							Sending...
+							{$language === 'ja' ? contactContent.form.sending : contactContent.form.sending}
 						{:else}
 							{contactContent.form.send}
 						{/if}
@@ -292,7 +325,10 @@
 				</form>
 				
 				<p class="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
-					Note: This is currently a demo form. For actual contact, please use the social links above.
+					{$language === 'ja' 
+						? contactContent.form.response_time
+						: contactContent.form.response_time
+					}
 				</p>
 			</div>
 		</div>

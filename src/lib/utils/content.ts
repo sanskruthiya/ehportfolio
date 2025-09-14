@@ -69,6 +69,10 @@ export interface ContactContent {
 		subject: string;
 		message: string;
 		send: string;
+		sending: string;
+		success: string;
+		error: string;
+		response_time: string;
 	};
 }
 

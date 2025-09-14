@@ -2,42 +2,42 @@
   "projects": [
     {
       "id": 1,
-      "title": "自然言語処理による文書マッピング",
-      "description": "自然言語処理を用いて文書間の関係性を2次元マッピングで可視化するアプリケーション。FOSS4G技術とテキスト分析を組み合わせた空間的文書可視化システム。",
-      "technologies": ["Python", "自然言語処理", "QGIS", "JavaScript", "データ可視化"],
-      "status": "completed",
-      "year": "2019",
+      "title": "Japan Geospatial Times",
+      "description": "日本のGISに関する歴史的背景やプロジェクト及びユースケースについて、英語で海外のGISコミュニティ向けに発信するブログサイトです。サイト自体をオープンソースで構築しており、記事執筆はマークダウン形式にて他の方にも貢献いただける仕組みを提供しています。また情報発信だけでなく、国内外のGISコミュニティとの情報ハブとなることを目指しています。",
+      "technologies": ["GIS", "SvelteKit"],
+      "status": "in_progress",
+      "year": "2025-",
       "links": {
-        "demo": "#",
-        "github": "#",
-        "presentation": "https://2019.foss4g.org/"
+        "demo": "https://jgtimes.org/",
+        "github": "https://github.com/sanskruthiya/jgtimes",
+        "presentation": "#"
       },
-      "image": "/api/placeholder/400/250",
+      "image": "/images/projects/project_JGT.webp",
       "featured": true
     },
     {
       "id": 2,
-      "title": "GISベース都市計画ツール",
-      "description": "地理空間データを活用した都市計画分析のためのオープンソースWebアプリケーション。インタラクティブマッピング機能により自治体の計画プロセスを支援。",
-      "technologies": ["JavaScript", "QGIS", "PostGIS", "Leaflet", "Python"],
+      "title": "柏たなかマップログ",
+      "description": "市民活動の中で作成している私の居住地域に特化した地図情報サイトです（日本語のみ）。保育園マップ、防災マップ、都市計画マップ、交通事故発生箇所マップなど、主にオープンデータを活用して日常生活に役立つウェブ地図を提供しています。また、これを通じて自治体や市民団体と共創しながら住みやすい地域づくりを実践しています。",
+      "technologies": ["QGIS", "MapLibre GL JS", "LeafletJS"],
       "status": "in_progress",
-      "year": "2023",
+      "year": "2021-",
       "links": {
-        "demo": "#",
+        "demo": "https://kashiwa.co-place.com/",
         "github": "#"
       },
-      "image": "/api/placeholder/400/250",
+      "image": "/images/projects/project_KTM.webp",
       "featured": true
     },
     {
       "id": 3,
-      "title": "コーヒーサプライチェーン追跡システム",
-      "description": "スリランカの農家から消費者までのコーヒーサプライチェーンを追跡するブロックチェーンベースアプリケーション。フェアトレード実践を確保するソーシャルビジネスプロジェクトで開発。",
-      "technologies": ["Node.js", "React", "ブロックチェーン", "MongoDB"],
+      "title": "World Earthquakes Map",
+      "description": "USGS地震データをフィードしてウェブ地図上に表示するアプリケーション。技術的にはシンプルだが月間1万PV程度のアクセスを継続的に受けているサイト。",
+      "technologies": ["LeafletJS", "JavaScript", "HTML", "CSS"],
       "status": "completed",
-      "year": "2013",
+      "year": "2018",
       "links": {
-        "demo": "#",
+        "demo": "https://co-place.com/earthquakes/",
         "github": "#"
       },
       "image": "/api/placeholder/400/250",
@@ -45,14 +45,14 @@
     },
     {
       "id": 4,
-      "title": "空間データ基盤ツールキット",
-      "description": "開発途上国が空間データ基盤を実装するための包括的ツールキット。ウクライナとルワンダプロジェクトでの経験に基づいて作成。",
-      "technologies": ["Python", "QGIS", "PostgreSQL", "Docker"],
+      "title": "ChronoGlobe",
+      "description": "世界の現在時刻、日の出・日の入り時刻、昼夜境界線を表示するデジタル地球儀。MapLibre GL JSのGlobeViewの試行用に作成したもの。",
+      "technologies": ["MapLibre GL JS", "JavaScript", "HTML", "CSS"],
       "status": "completed",
-      "year": "2018",
+      "year": "2025",
       "links": {
-        "demo": "#",
-        "github": "#"
+        "demo": "https://kashiwa.co-place.com/cmap/terminator/",
+        "github": "https://github.com/sanskruthiya/globeTerminator"
       },
       "image": "/api/placeholder/400/250",
       "featured": false

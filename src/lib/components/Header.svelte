@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { theme } from '$lib/stores/theme';
 	import { language } from '$lib/stores/language';
 	import { loadContent } from '$lib/utils/content';
 	import type { NavigationContent } from '$lib/utils/content';
+
+	// Temporarily commented out until dark mode functionality is implemented
+	// export let isDarkMode: boolean = false;
+	// export let onToggleDarkMode: () => void = () => {};
 
 	let navigationContent: NavigationContent = {
 		about: 'About',
@@ -17,7 +20,6 @@
 	let isMobileMenuOpen = false;
 
 	onMount(async () => {
-		theme.init();
 		language.init();
 		
 		// Load initial content
@@ -34,10 +36,6 @@
 		currentPath = window.location.pathname;
 	});
 
-	function toggleTheme() {
-		theme.toggle();
-	}
-
 	function toggleLanguage() {
 		language.toggle();
 	}
@@ -50,7 +48,6 @@
 		isMobileMenuOpen = false;
 	}
 
-	$: isDark = $theme === 'dark';
 	$: isJapanese = $language === 'ja';
 </script>
 
@@ -84,20 +81,20 @@
 						{navigationContent.experience}
 					</a>
 					<a 
-						href="/projects" 
-						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-						class:text-blue-600={currentPath === '/projects'}
-						class:dark:text-blue-400={currentPath === '/projects'}
-					>
-						{navigationContent.projects}
-					</a>
-					<a 
 						href="/publications" 
 						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
 						class:text-blue-600={currentPath === '/publications'}
 						class:dark:text-blue-400={currentPath === '/publications'}
 					>
 						{navigationContent.publications}
+					</a>
+					<a 
+						href="/projects" 
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+						class:text-blue-600={currentPath === '/projects'}
+						class:dark:text-blue-400={currentPath === '/projects'}
+					>
+						{navigationContent.projects}
 					</a>
 					<a 
 						href="/contact" 
@@ -115,28 +112,33 @@
 				<!-- Language Toggle -->
 				<button
 					on:click={toggleLanguage}
-					class="flex items-center space-x-1 px-3 py-1 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+					class="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500"
 					aria-label="Toggle language"
 				>
-					<span class="text-xs font-mono">{isJapanese ? 'EN' : 'JA'}</span>
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+					</svg>
+					<span class="font-medium">{isJapanese ? 'English' : '日本語'}</span>
 				</button>
 
-				<!-- Theme Toggle -->
+				<!-- Theme Toggle - Temporarily hidden until functionality is implemented -->
+				<!-- 
 				<button
-					on:click={toggleTheme}
-					class="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-					aria-label="Toggle theme"
+					on:click={onToggleDarkMode}
+					class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+					aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
 				>
-					{#if isDark}
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+					{#if isDarkMode}
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+							<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
 						</svg>
 					{:else}
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
 						</svg>
 					{/if}
 				</button>
+				-->
 
 				<!-- Mobile menu button -->
 				<button
@@ -179,18 +181,18 @@
 						{navigationContent.experience}
 					</a>
 					<a 
-						href="/projects" 
-						on:click={closeMobileMenu}
-						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/projects' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
-					>
-						{navigationContent.projects}
-					</a>
-					<a 
 						href="/publications" 
 						on:click={closeMobileMenu}
 						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/publications' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
 					>
 						{navigationContent.publications}
+					</a>
+					<a 
+						href="/projects" 
+						on:click={closeMobileMenu}
+						class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors {currentPath === '/projects' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : ''}"
+					>
+						{navigationContent.projects}
 					</a>
 					<a 
 						href="/contact" 

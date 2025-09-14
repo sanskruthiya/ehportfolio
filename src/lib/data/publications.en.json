@@ -2,75 +2,76 @@
   "publications": [
     {
       "id": 1,
-      "title": "Natural Language Processing meets FOSS4G – Introduction of Document Mapping",
+      "title": "Master's Thesis: Application of the Geographic Information System (GIS) in developing countries",
+      "type": "dissertation",
+      "venue": "University of Birmingham",
+      "date": "September 2014",
+      "description": "Research on GIS applications in developing countries through interviews and case studies in Zambia. The study suggests that GIS can act as a catalyst for social reconstruction and organizational reform, and that data management challenges are not only technical but also organizational in nature.",
+      "links": {
+        "pdf": "/deliverables/Dissertation_Eita_Horishita.pdf",
+        "conference": "#"
+      },
+      "tags": ["GIS", "Developing Countries", "Technology Transfer"],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Natural Language Processing meets FOSS4G - Introduction of Document Mapping",
       "type": "conference_presentation",
-      "venue": "FOSS4G International Conference 2019",
+      "venue": "FOSS4G 2019 Bucharest",
       "location": "Bucharest, Romania",
-      "date": "August 2019",
-      "description": "Presented a novel approach combining natural language processing with open-source geospatial technologies for document visualization and analysis.",
+      "date": "September 2019",
+      "description": "Presented a new approach combining natural language processing with open-source geospatial technologies for document visualization and analysis. Demonstrated how natural language processing techniques for qualitative information analysis could become a breakthrough for future GIS applications.",
       "links": {
         "conference": "https://2019.foss4g.org/",
         "slides": "#",
-        "video": "#"
+        "video": "https://media.ccc.de/v/bucharest-209-natural-language-processing-meets-foss4g-introduction-of-document-mapping"
       },
       "tags": ["Natural Language Processing", "FOSS4G", "Document Analysis", "Geospatial Technology"],
       "featured": true
     },
     {
-      "id": 2,
-      "title": "Spatial Data Infrastructure Implementation in Developing Countries: Lessons from Ukraine and Rwanda",
-      "type": "technical_report",
-      "venue": "World Bank Knowledge Sourcebook",
-      "date": "March 2018",
-      "description": "Comprehensive analysis of spatial data infrastructure implementation challenges and solutions based on field experience in Ukraine and Rwanda projects.",
-      "links": {
-        "pdf": "#",
-        "worldbank": "#"
-      },
-      "tags": ["Spatial Data Infrastructure", "International Development", "GIS", "Policy"],
-      "featured": true
-    },
-    {
       "id": 3,
-      "title": "Urban Development Strategies: The Yokohama Model",
+      "title": "Yokohama Development Knowledge Sourcebook",
       "type": "case_study",
-      "venue": "World Bank Knowledge Sourcebook",
+      "venue": "World Bank",
       "date": "December 2017",
-      "description": "Case study analysis of Yokohama's urban development approach and its applicability to other developing urban areas.",
+      "description": "Analysis of Yokohama's urban development approach through the so-called 'Six Major Projects,' examining how transportation network development, city center revitalization, and residential area development were achieved. The study analyzed approaches and success factors in land use management, financing, inter-departmental coordination, and citizen participation, demonstrating potential reference value for urban development in other cities worldwide. Responsible for research and manuscript writing.",
       "links": {
-        "pdf": "#",
+        "pdf": "https://www.city.yokohama.lg.jp/business/kokusaikoryu/yport/material/pf_yport.files/0163_20190419.pdf",
         "worldbank": "#"
       },
       "tags": ["Urban Planning", "Case Study", "Development Strategy"],
-      "featured": false
+      "featured": true
     },
     {
       "id": 4,
-      "title": "Community-Based Coffee Production Systems in Sri Lanka",
-      "type": "research_paper",
-      "venue": "International Journal of Agricultural Development",
-      "date": "September 2013",
-      "description": "Research on sustainable coffee production models and their impact on rural community development in Sri Lanka's central highlands.",
+      "title": "PROJECT FOR STRENGTHENING NON-REVENUE WATER CONTROL IN KIGALI CITY WATER NETWORK",
+      "type": "technical_report",
+      "venue": "Rwanda, Kigali",
+      "location": "Kigali, Rwanda",
+      "date": "November 2015",
+      "description": "Served as GIS expert for technology transfer in a technical cooperation project for urban water supply in Rwanda. Specifically responsible for GIS data development and management of water supply facilities including water pipes, and analysis methods. Worked with local counterparts through field surveys and practical work to discuss practical applications of ArcGIS and QGIS, providing checklists, manuals, and simple tools.",
       "links": {
-        "pdf": "#",
-        "journal": "#"
+        "pdf": "https://openjicareport.jica.go.jp/pdf/12364485_01.pdf",
+        "worldbank": "#"
       },
-      "tags": ["Agricultural Development", "Community Development", "Sustainability"],
+      "tags": ["Spatial Data Infrastructure", "International Development", "GIS", "Policy"],
       "featured": false
     },
     {
       "id": 5,
-      "title": "GIS Applications in Developing Countries: Challenges and Opportunities",
-      "type": "conference_paper",
-      "venue": "International Conference on Geoinformatics",
-      "date": "June 2015",
-      "description": "Analysis of GIS implementation challenges in developing countries and proposed solutions based on field experience.",
+      "title": "Community-Based Coffee Production Systems in Sri Lanka",
+      "type": "research_paper",
+      "venue": "Kandy, Sri Lanka",
+      "date": "September 2013",
+      "description": "Research on sustainable coffee production models and their impact on rural community development in Sri Lanka's central highlands.",
       "links": {
-        "pdf": "#",
-        "conference": "#"
+        "pdf": "/deliverables/SriLankaCoffeeReport_20130919.pdf",
+        "journal": "#"
       },
-      "tags": ["GIS", "Developing Countries", "Technology Transfer"],
-      "featured": false
+      "tags": ["Agricultural Development", "Community Development", "Sustainability"],
+      "featured": true
     }
   ]
 }

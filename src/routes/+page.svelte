@@ -43,14 +43,15 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="py-20 px-4 sm:px-6 lg:px-8">
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-blue-900">
 	<div class="max-w-4xl mx-auto text-center">
 		<!-- Profile Photo -->
-		<div class="mb-8">
+		<div class="mb-8 relative inline-block">
+			<div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-full -z-10 w-56 h-56 sm:w-72 sm:h-72 mx-auto left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
 			<img 
 				src="/myprofile/myphoto.webp" 
 				alt={aboutContent.name}
-				class="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover border-4 border-blue-100 dark:border-blue-900 shadow-lg"
+				class="w-64 h-64 sm:w-72 sm:h-72 rounded-full mx-auto object-cover border-4 border-blue-100 dark:border-blue-900 shadow-lg relative z-10"
 			/>
 		</div>
 
@@ -102,15 +103,17 @@
 		<div class="grid md:grid-cols-2 gap-12 items-start">
 			<!-- Introduction -->
 			<div>
-				<h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+				<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
 					{aboutContent.title}
 				</h2>
 				<p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
 					{aboutContent.introduction}
 				</p>
+				<!--
 				<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
 					{aboutContent.brief_history}
 				</p>
+				-->
 			</div>
 
 			<!-- Quick Stats -->
@@ -131,6 +134,10 @@
 								<span class="text-gray-600 dark:text-gray-400">Company:</span>
 								<span class="text-gray-900 dark:text-white">{profileData.personal.current_company}</span>
 							</div>
+							<div class="flex justify-between">
+								<span class="text-gray-600 dark:text-gray-400">Education:</span>
+								<span class="text-gray-900 dark:text-white">{profileData.education[0].institution}</span>
+							</div>
 						{/if}
 					</div>
 				</div>
@@ -138,7 +145,7 @@
 				<!-- Skills Preview -->
 				{#if profileData.skills?.technical}
 					<div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
-						<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Core Technologies</h3>
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Software Skills</h3>
 						<div class="flex flex-wrap gap-2">
 							{#each profileData.skills.technical.slice(0, 6) as skill}
 								<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">

@@ -2,42 +2,42 @@
   "projects": [
     {
       "id": 1,
-      "title": "Document Mapping with NLP",
-      "description": "A natural language processing application that visualizes document relationships through 2D mapping. Combines FOSS4G technologies with text analysis for spatial document visualization.",
-      "technologies": ["Python", "Natural Language Processing", "QGIS", "JavaScript", "Data Visualization"],
-      "status": "completed",
-      "year": "2019",
+      "title": "Japan Geospatial Times",
+      "description": "A blog site that disseminates information about Japan's GIS historical background, projects, and use cases to the international GIS community in English. The site itself is built with open source technology, and provides a mechanism for others to contribute to article writing in markdown format. It aims to become an information hub with domestic and international GIS communities, not just information dissemination.",
+      "technologies": ["GIS", "SvelteKit"],
+      "status": "in_progress",
+      "year": "2025-",
       "links": {
-        "demo": "#",
-        "github": "#",
-        "presentation": "https://2019.foss4g.org/"
+        "demo": "https://jgtimes.org/",
+        "github": "https://github.com/sanskruthiya/jgtimes",
+        "presentation": "#"
       },
-      "image": "/api/placeholder/400/250",
+      "image": "/images/projects/project_JGT.webp",
       "featured": true
     },
     {
       "id": 2,
-      "title": "GIS-based Urban Planning Tool",
-      "description": "An open-source web application for urban planning analysis using geospatial data. Developed for supporting municipal planning processes with interactive mapping capabilities.",
-      "technologies": ["JavaScript", "QGIS", "PostGIS", "Leaflet", "Python"],
+      "title": "Kashiwa-Tanaka Map Log",
+      "description": "A map information site specialized for my residential area, created as part of civic activities (Japanese only). It provides web maps useful for daily life, such as nursery maps, disaster prevention maps, urban planning maps, and traffic accident occurrence maps, mainly utilizing open data. Through this, I practice creating a livable community through co-creation with local governments and civic organizations.",
+      "technologies": ["QGIS", "MapLibre GL JS", "LeafletJS"],
       "status": "in_progress",
-      "year": "2023",
+      "year": "2021-",
       "links": {
-        "demo": "#",
+        "demo": "https://kashiwa.co-place.com/",
         "github": "#"
       },
-      "image": "/api/placeholder/400/250",
+      "image": "/images/projects/project_KTM.webp",
       "featured": true
     },
     {
       "id": 3,
-      "title": "Coffee Supply Chain Tracker",
-      "description": "A blockchain-based application for tracking coffee supply chain from Sri Lankan farmers to consumers. Developed during social business project to ensure fair trade practices.",
-      "technologies": ["Node.js", "React", "Blockchain", "MongoDB"],
+      "title": "World Earthquakes Map",
+      "description": "An application that feeds USGS earthquake data and displays it on a web map. Technically simple, but a site that continuously receives about 10,000 page views per month.",
+      "technologies": ["LeafletJS", "JavaScript", "HTML", "CSS"],
       "status": "completed",
-      "year": "2013",
+      "year": "2018",
       "links": {
-        "demo": "#",
+        "demo": "https://co-place.com/earthquakes/",
         "github": "#"
       },
       "image": "/api/placeholder/400/250",
@@ -45,14 +45,14 @@
     },
     {
       "id": 4,
-      "title": "Spatial Data Infrastructure Toolkit",
-      "description": "A comprehensive toolkit for developing countries to implement spatial data infrastructure. Created based on experience from Ukraine and Rwanda projects.",
-      "technologies": ["Python", "QGIS", "PostgreSQL", "Docker"],
+      "title": "ChronoGlobe",
+      "description": "A digital globe that displays the current time around the world, sunrise and sunset times, and the day-night boundary line. Created for testing MapLibre GL JS's GlobeView.",
+      "technologies": ["MapLibre GL JS", "JavaScript", "HTML", "CSS"],
       "status": "completed",
-      "year": "2018",
+      "year": "2025",
       "links": {
-        "demo": "#",
-        "github": "#"
+        "demo": "https://kashiwa.co-place.com/cmap/terminator/",
+        "github": "https://github.com/sanskruthiya/globeTerminator"
       },
       "image": "/api/placeholder/400/250",
       "featured": false

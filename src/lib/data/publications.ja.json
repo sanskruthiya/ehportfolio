@@ -2,75 +2,76 @@
   "publications": [
     {
       "id": 1,
-      "title": "自然言語処理とFOSS4Gの融合 – 文書マッピングの紹介",
+      "title": "修士論文：Application of the Geographic Information System (GIS) in developing countries",
+      "type": "dissertation",
+      "venue": "University of Birmingham",
+      "date": "2014年9月",
+      "description": "開発途上国でのGISの適用に関して、ザンビアでのインタビュー調査とケーススタディを交えて考察した。その結果、GISが社会再構築や組織改革の触媒として作用し得ることや、データ管理の課題は技術だけでなく組織構造的なものであることが示唆された。",
+      "links": {
+        "pdf": "/deliverables/Dissertation_Eita_Horishita.pdf",
+        "conference": "#"
+      },
+      "tags": ["GIS", "開発途上国", "技術移転"],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Natural Language Processing meets FOSS4G - Introduction of Document Mapping",
       "type": "conference_presentation",
-      "venue": "FOSS4G国際会議 2019",
+      "venue": "FOSS4G 2019 Bucharest",
       "location": "ブカレスト、ルーマニア",
-      "date": "2019年8月",
-      "description": "自然言語処理とオープンソース地理空間技術を組み合わせた文書可視化・分析の新しいアプローチを発表。",
+      "date": "2019年9月",
+      "description": "自然言語処理とオープンソース地理空間技術を組み合わせた文書可視化・分析の新しいアプローチを発表した。その中で、自然言語処理による質的情報解析の技術が今後のGISのブレイクスルーとなり得ることを示した。",
       "links": {
         "conference": "https://2019.foss4g.org/",
         "slides": "#",
-        "video": "#"
+        "video": "https://media.ccc.de/v/bucharest-209-natural-language-processing-meets-foss4g-introduction-of-document-mapping"
       },
       "tags": ["自然言語処理", "FOSS4G", "文書分析", "地理空間技術"],
       "featured": true
     },
     {
-      "id": 2,
-      "title": "開発途上国における空間データ基盤の実装：ウクライナとルワンダからの教訓",
-      "type": "technical_report",
-      "venue": "世界銀行ナレッジソースブック",
-      "date": "2018年3月",
-      "description": "ウクライナとルワンダプロジェクトでの現場経験に基づく空間データ基盤実装の課題と解決策の包括的分析。",
-      "links": {
-        "pdf": "#",
-        "worldbank": "#"
-      },
-      "tags": ["空間データ基盤", "国際開発", "GIS", "政策"],
-      "featured": true
-    },
-    {
       "id": 3,
-      "title": "都市開発戦略：横浜モデル",
+      "title": "Yokohama Development Knowledge Sourcebook",
       "type": "case_study",
-      "venue": "世界銀行ナレッジソースブック",
+      "venue": "世界銀行",
       "date": "2017年12月",
-      "description": "横浜の都市開発アプローチのケーススタディ分析と他の発展途上都市地域への適用可能性。",
+      "description": "横浜の都市開発アプローチについて、いわゆる「6大プロジェクト」を通じて交通網の整備、中心市街地の活性化、住宅地の開発などをどのように実現したか、そして土地利用管理、資金調達、部門間連携、市民参加におけるアプローチと成功要因について分析し、世界の他の都市開発に参考になる可能性を示した。調査と原稿執筆を担当。",
       "links": {
-        "pdf": "#",
+        "pdf": "https://www.city.yokohama.lg.jp/business/kokusaikoryu/yport/material/pf_yport.files/0163_20190419.pdf",
         "worldbank": "#"
       },
       "tags": ["都市計画", "ケーススタディ", "開発戦略"],
-      "featured": false
+      "featured": true
     },
     {
       "id": 4,
-      "title": "スリランカにおけるコミュニティベースコーヒー生産システム",
-      "type": "research_paper",
-      "venue": "国際農業開発ジャーナル",
-      "date": "2013年9月",
-      "description": "スリランカ中央高地における持続可能なコーヒー生産モデルと農村コミュニティ開発への影響に関する研究。",
+      "title": "PROJECT FOR STRENGTHENING NON-REVENUE WATER CONTROL IN KIGALI CITY WATER NETWORK",
+      "type": "technical_report",
+      "venue": "Rwanda, Kigali",
+      "location": "ルワンダ、キガリ",
+      "date": "2015年11月",
+      "description": "ルワンダ国の都市給水のための技術協力プロジェクトにおいて、GIS専門家として技術移転を担当。特に、水道管など給水施設のGISデータ整備と管理、分析手法について、現地のカウンターパートとともに現地調査や実務を行いながら、ArcGISとQGISの実用的な利用方法を議論し、チェックリストやマニュアル、簡易ツールを提供した。",
       "links": {
-        "pdf": "#",
-        "journal": "#"
+        "pdf": "https://openjicareport.jica.go.jp/pdf/12364485_01.pdf",
+        "worldbank": "#"
       },
-      "tags": ["農業開発", "コミュニティ開発", "持続可能性"],
+      "tags": ["空間データ基盤", "国際開発", "GIS", "政策"],
       "featured": false
     },
     {
       "id": 5,
-      "title": "開発途上国におけるGISアプリケーション：課題と機会",
-      "type": "conference_paper",
-      "venue": "地理情報学国際会議",
-      "date": "2015年6月",
-      "description": "開発途上国でのGIS実装課題の分析と現場経験に基づく提案された解決策。",
+      "title": "スリランカにおけるコミュニティベースのコーヒー生産システム",
+      "type": "research_paper",
+      "venue": "スリランカ、キャンディ",
+      "date": "2013年9月",
+      "description": "スリランカ中央高地における持続可能なコーヒー生産モデルと農村コミュニティ開発への影響に関する研究。",
       "links": {
-        "pdf": "#",
-        "conference": "#"
+        "pdf": "/deliverables/SriLankaCoffeeReport_20130919.pdf",
+        "journal": "#"
       },
-      "tags": ["GIS", "開発途上国", "技術移転"],
-      "featured": false
+      "tags": ["農業開発", "コミュニティ開発", "持続可能性"],
+      "featured": true
     }
   ]
 }

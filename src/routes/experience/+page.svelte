@@ -48,7 +48,7 @@
 				{experienceContent.title}
 			</h1>
 			<p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-				A comprehensive overview of my professional journey, education, and technical expertise.
+				Professional experience and educational background.
 			</p>
 		</div>
 
@@ -94,12 +94,64 @@
 									</p>
 									
 									{#if job.skills}
-										<div class="flex flex-wrap gap-2">
+										<div class="flex flex-wrap gap-2 mb-4">
 											{#each job.skills as skill}
 												<span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
 													{skill}
 												</span>
 											{/each}
+										</div>
+									{/if}
+									
+									<!-- References -->
+									{#if job.references}
+										<div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+											<h4 class="text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center">
+												<svg class="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+												</svg>
+												参考資料・発表
+											</h4>
+											<div class="space-y-2">
+												{#each job.references as reference}
+													<div class="flex items-start">
+														<div class="flex-shrink-0 mr-3">
+															{#if reference.type === 'research_paper'}
+																<svg class="w-4 h-4 mt-0.5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+																</svg>
+															{:else if reference.type === 'technical_report'}
+																<svg class="w-4 h-4 mt-0.5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z M4 5a2 2 0 012-2v1a1 1 0 001 1h6a1 1 0 001-1V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" />
+																</svg>
+															{:else if reference.type === 'case_study'}
+																<svg class="w-4 h-4 mt-0.5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+																</svg>
+															{:else}
+																<svg class="w-4 h-4 mt-0.5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+																</svg>
+															{/if}
+														</div>
+														<div class="flex-1 min-w-0">
+															<a 
+																href={reference.url} 
+																target="_blank" 
+																rel="noopener noreferrer"
+																class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline"
+															>
+																{reference.title}
+															</a>
+															{#if reference.description}
+																<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+																	{reference.description}
+																</p>
+															{/if}
+														</div>
+													</div>
+												{/each}
+											</div>
 										</div>
 									{/if}
 								</div>
@@ -142,9 +194,65 @@
 									</div>
 									
 									{#if edu.description}
-										<p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+										<p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
 											{edu.description}
 										</p>
+									{/if}
+									
+									<!-- References -->
+									{#if edu.references}
+										<div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+											<h4 class="text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center">
+												<svg class="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+												</svg>
+												参考資料・発表
+											</h4>
+											<div class="space-y-2">
+												{#each edu.references as reference}
+													<div class="flex items-start">
+														<div class="flex-shrink-0 mr-3">
+															{#if reference.type === 'research_paper'}
+																<svg class="w-4 h-4 mt-0.5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+																</svg>
+															{:else if reference.type === 'technical_report'}
+																<svg class="w-4 h-4 mt-0.5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z M4 5a2 2 0 012-2v1a1 1 0 001 1h6a1 1 0 001-1V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" />
+																</svg>
+															{:else if reference.type === 'case_study'}
+																<svg class="w-4 h-4 mt-0.5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+																</svg>
+															{:else if reference.type === 'presentation'}
+																<svg class="w-4 h-4 mt-0.5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2h3a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1h3z" />
+																</svg>
+															{:else}
+																<svg class="w-4 h-4 mt-0.5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+																</svg>
+															{/if}
+														</div>
+														<div class="flex-1 min-w-0">
+															<a 
+																href={reference.url} 
+																target="_blank" 
+																rel="noopener noreferrer"
+																class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline"
+															>
+																{reference.title}
+															</a>
+															{#if reference.description}
+																<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+																	{reference.description}
+																</p>
+															{/if}
+														</div>
+													</div>
+												{/each}
+											</div>
+										</div>
 									{/if}
 								</div>
 							{/each}

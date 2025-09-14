@@ -1,23 +1,37 @@
 {
   "personal": {
     "name": "Eita Horishita",
-    "name_japanese": "堀下 栄太",
-    "birth_date": "July 19, 1985",
+    "name_english": "Eita Horishita",
+    "birth_date": "1985",
     "current_position": "Technical Research Expert",
     "current_company": "VALUENEX Japan",
-    "location": "Japan",
+    "location": "Chiba, Japan",
     "github": "https://github.com/sanskruthiya",
     "linkedin": "https://www.linkedin.com/in/eita-horishita-2b8a605a/"
   },
   "work_experience": [
     {
       "id": 1,
-      "company": "VALUENEX Japan",
+      "company": "VALUENEX Co., Ltd.",
       "position": "Technical Research Expert",
-      "department": "Business Design Office Leader & International Business Development Office Member",
+      "department": "Co-creation Promotion Department",
       "period": "October 2018 - Present",
-      "description": "Conduct technology trend analysis using natural language processing for document visualization. Provide consulting services to private companies' R&D and IP departments for technology assessment, whitespace exploration, and startup research. Analyze social needs through review sites, SNS, and workshop comments. Implement data preprocessing, web scraping, document vectorization, and dimensionality reduction using Python, along with data visualization using QGIS/JavaScript.",
-      "skills": ["Python", "Natural Language Processing", "Data Visualization", "QGIS", "JavaScript", "Technology Analysis"]
+      "description": "Conduct analytical research utilizing big data analysis of document information. Primarily serve clients in R&D, IP, and planning departments of private companies, responsible for IP landscape analysis, technology trend analysis, whitespace exploration, and competitive/collaborative partner company research. Additionally experienced in potential social needs research through analysis of reviews and resident workshop comments. Specialize in data preprocessing, web scraping, document vector generation, and dimensionality reduction using Python, and data visualization using QGIS/JavaScript.",
+      "skills": ["Technology Trend Analysis", "Bibliometrics", "IP Landscape", "Natural Language Processing", "Data Visualization", "JavaScript", "Python"],
+      "references": [
+        {
+          "title": "Online Seminar: Exploring Innovation Sources through Patent and Research Paper Analysis (Japanese only, summary available)",
+          "type": "presentation",
+          "url": "https://www.valuenex.com/jp/events-list/2024/innovation-through-data-analysis",
+          "description": "Seminar analyzing patent technology and academic research data on three themes including 'Technology and Research Trends in Hydrogen Generation, Storage, and Utilization', explaining methodologies and insights."
+        },
+        {
+          "title": "Technology Trend Survey on High-Precision 3D Map Data (Japanese only)",
+          "type": "technical_report",
+          "url": "https://www.meti.go.jp/meti_lib/report/2023FY/000616.pdf#page=430",
+          "description": "Survey conducted under METI's 'Standards Utilization Acceleration Support Project' commissioned by Dynamic Map Platform Co., Ltd. Analysis survey included in the reference materials section of the main report."
+        }
+      ]
     },
     {
       "id": 2,
@@ -26,16 +40,38 @@
       "department": "International Headquarters, Urban Planning Team",
       "period": "November 2014 - August 2018",
       "description": "Provided strategic, policy, and technical consulting on spatial information infrastructure (GIS/NSDI) in Ukraine and Rwanda. Conducted policy and technical consulting on urban planning in Japan and Papua New Guinea. Supported Japanese SME overseas expansion in Sri Lanka and East Timor. Conducted advanced case studies on spatial information in Japan and consulting on integrated GIS introduction and operation for local governments.",
-      "skills": ["GIS", "Urban Planning", "International Development", "Policy Consulting", "Project Management"]
+      "skills": ["GIS", "Urban Planning", "International Development", "Policy Consulting", "Project Management"],
+      "references": [
+        {
+          "title": "Yokohama Development Knowledge Sourcebook (English only)",
+          "type": "case_study",
+          "url": "https://www.city.yokohama.lg.jp/business/kokusaikoryu/yport/material/pf_yport.files/0163_20190419.pdf",
+          "description": "World Bank commissioned case study on Yokohama's urban development approach"
+        },
+        {
+          "title": "Rwanda Water Supply Project Technical Report (English version)",
+          "type": "technical_report",
+          "url": "https://openjicareport.jica.go.jp/pdf/12364485_01.pdf",
+          "description": "JICA technical cooperation project report on GIS expertise and technology transfer"
+        }
+      ]
     },
     {
       "id": 3,
-      "company": "Japan Fair Trade Commission",
+      "company": "Japan Fair Trade Committee",
       "position": "Project Manager",
       "department": "High Value-Added Coffee Production Project",
       "period": "September 2012 - August 2013",
-      "description": "Managed social business planning and execution in Sri Lankan rural areas. Improved coffee quality for individual farmers while building business models including company establishment, store opening for coffee export and sales. Conducted research on local coffee conditions (history, varieties, production areas, processing technology) with government cooperation.",
-      "skills": ["Project Management", "Social Business", "Agricultural Development", "Market Research"]
+      "description": "Oversaw planning and execution of social business in Sri Lankan rural areas. Worked to improve coffee quality for individual farmers while establishing business models including company startup, physical store opening in Kandy city with employee training, and initial operation management, realizing a comprehensive business model. Also conducted research on local coffee conditions (history, varieties, production areas, processing technology) with cooperation from local government agencies, compiling findings into a report.",
+      "skills": ["Project Management", "Social Business", "Agricultural Development", "Market Research"],
+      "references": [
+        {
+          "title": "Sri Lanka Coffee Survey Report (English version)",
+          "type": "research_paper",
+          "url": "/deliverables/SriLankaCoffeeReport_20130919.pdf",
+          "description": "Report summarizing coffee production and distribution conditions in Sri Lanka's central highlands."
+        }
+      ]
     },
     {
       "id": 4,
@@ -64,7 +100,15 @@
       "degree": "MSc International Development (with Merit)",
       "location": "United Kingdom",
       "period": "September 2013 - October 2014",
-      "description": "Specialized in international development with focus on spatial information systems and urban planning in developing countries."
+      "description": "Specialized in international development with focus on spatial information systems and urban planning in developing countries.",
+      "references": [
+        {
+          "title": "Dissertation: Application of the Geographic Information System (GIS) in developing countries",
+          "type": "research_paper",
+          "url": "/deliverables/Dissertation_Eita_Horishita.pdf",
+          "description": "Master's thesis examining GIS applications in developing countries through interviews and case studies in Zambia. Suggests that GIS can act as a catalyst for organizational reform and that data management challenges are organizational rather than purely technical."
+        }
+      ]
     },
     {
       "id": 2,
@@ -76,7 +120,7 @@
     }
   ],
   "skills": {
-    "technical": ["Python", "JavaScript", "SvelteKit", "QGIS", "ArcGIS", "MS Office", "AutoCAD", "Illustrator"],
+    "technical": ["QGIS", "ArcGIS", "MapLibre GL JS", "LeafletJS", "SvelteKit", "Python", "JavaScript", "MS Office"],
     "languages": [
       {
         "language": "Japanese",
@@ -84,23 +128,23 @@
       },
       {
         "language": "English",
-        "level": "Business Level",
+        "level": "Business Level (CEFR C1)",
         "certifications": ["TOEIC 935 (2017)", "IELTS 7.0 (2019)"],
-        "experience": "Document analysis, email correspondence, presentations, official document preparation"
+        "experience": "Document reading, email correspondence, presentations, report writing"
       },
       {
         "language": "Sinhala",
         "level": "Business Level",
-        "experience": "Presentations, interpretation, negotiations in coffee business development"
+        "experience": "Presentations, interpretation, negotiations"
       }
     ],
     "specialties": [
-      "GIS and Geospatial Information Technology",
-      "Natural Language Processing for Document Analysis",
-      "International Development Technical and Policy Support",
-      "Government ODA Project Planning and Proposals",
-      "Urban Planning Documentation",
-      "Data Visualization and Design"
+      "GIS (Geographic Information Systems) visualization and analysis",
+      "Document information analysis using natural language processing",
+      "IP (Intellectual Property) landscape analysis using bibliometric approaches",
+      "Technology transfer and strategic development support for developing countries",
+      "Planning, proposal, and project management for government ODA-related projects",
+      "Various urban planning consulting services"
     ]
   },
   "certifications": [
@@ -113,7 +157,7 @@
       "date": "June 2016"
     },
     {
-      "name": "Professional Engineer (Information Engineering)",
+      "name": "Associate Professional Engineer (Information Engineering)",
       "date": "November 2017"
     }
   ]
