@@ -4,9 +4,9 @@
 	import { loadContent } from '$lib/utils/content';
 	import type { NavigationContent } from '$lib/utils/content';
 
-	// Temporarily commented out until dark mode functionality is implemented
-	// export let isDarkMode: boolean = false;
-	// export let onToggleDarkMode: () => void = () => {};
+	// Enable dark mode functionality
+	export let isDarkMode: boolean = false;
+	export let onToggleDarkMode: () => void = () => {};
 
 	let navigationContent: NavigationContent = {
 		about: 'About',
@@ -107,38 +107,39 @@
 				</div>
 			</div>
 
-			<!-- Controls (Language & Theme Toggle) -->
+			<!-- Right side controls -->
 			<div class="flex items-center space-x-4">
-				<!-- Language Toggle -->
-				<button
-					on:click={toggleLanguage}
-					class="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500"
-					aria-label="Toggle language"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-					</svg>
-					<span class="font-medium">{isJapanese ? 'English' : '日本語'}</span>
-				</button>
+				<!-- Desktop Controls (Language & Theme Toggle) - Hidden on mobile -->
+				<div class="hidden md:flex items-center space-x-4">
+					<!-- Language Toggle -->
+					<button
+						on:click={toggleLanguage}
+						class="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 border border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500"
+						aria-label="Toggle language"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9" />
+						</svg>
+						<span class="font-medium">{isJapanese ? 'English' : '日本語'}</span>
+					</button>
 
-				<!-- Theme Toggle - Temporarily hidden until functionality is implemented -->
-				<!-- 
-				<button
-					on:click={onToggleDarkMode}
-					class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-					aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-				>
-					{#if isDarkMode}
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-							<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
-						</svg>
-					{:else}
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-						</svg>
-					{/if}
-				</button>
-				-->
+					<!-- Theme Toggle -->
+					<button
+						on:click={onToggleDarkMode}
+						class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+						aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+					>
+						{#if isDarkMode}
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+							</svg>
+						{:else}
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+								<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+							</svg>
+						{/if}
+					</button>
+				</div>
 
 				<!-- Mobile menu button -->
 				<button
@@ -201,6 +202,47 @@
 					>
 						{navigationContent.contact}
 					</a>
+					
+					<!-- Mobile Controls Section -->
+					<div class="border-t border-gray-200 dark:border-gray-700 pt-3 mt-3">
+						<!-- Language Toggle (Mobile) -->
+						<button
+							on:click={toggleLanguage}
+							class="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+						>
+							<div class="flex items-center space-x-3">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+								</svg>
+								<span>Language</span>
+							</div>
+							<span class="text-sm font-medium text-blue-600 dark:text-blue-400">
+								{isJapanese ? 'English' : '日本語'}
+							</span>
+						</button>
+						
+						<!-- Dark Mode Toggle (Mobile) -->
+						<button
+							on:click={onToggleDarkMode}
+							class="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+						>
+							<div class="flex items-center space-x-3">
+								{#if isDarkMode}
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+										<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+									</svg>
+								{:else}
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+										<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+									</svg>
+								{/if}
+								<span>Theme</span>
+							</div>
+							<span class="text-sm font-medium text-blue-600 dark:text-blue-400">
+								{isDarkMode ? 'Light' : 'Dark'}
+							</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		{/if}

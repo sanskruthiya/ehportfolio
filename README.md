@@ -1,38 +1,33 @@
-# sv
+# Portfolio Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Professional portfolio website showcasing expertise in Science, Technology & Innovation (STI) strategy and GIS applications.
 
-## Creating a project
+🌐 **Live Site**: https://eitahorishita.com/
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
+- **Bilingual Support**: Seamless English/Japanese language switching with browser detection
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Dark Mode**: System preference detection with manual toggle
+- **Interactive Navigation**: Mobile hamburger menu with integrated controls
+- **Publications Showcase**: Academic papers and research deliverables
+- **Project Portfolio**: Featured and general project displays
+- **Contact Form**: Formspree integration for direct communication
+- **Professional Experience**: Detailed work history and education
+- **Skills & Certifications**: Technical competencies and qualifications
 
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+## Project Structure
+```
+src/
+├── lib/
+│   ├── components/     # Reusable UI components
+│   ├── data/          # Content files (EN/JA)
+│   ├── stores/        # Svelte stores (language state)
+│   └── utils/         # Utility functions and types
+├── routes/            # SvelteKit pages
+└── static/            # Static assets and deliverables
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Tech Stack
+- **Framework**: SvelteKit with TypeScript
+- **Styling**: TailwindCSS for responsive design
+- **Deployment**: CloudFlare Pages with custom domain
