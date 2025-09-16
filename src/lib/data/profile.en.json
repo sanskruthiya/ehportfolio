@@ -3,7 +3,7 @@
     "name": "Eita Horishita",
     "name_english": "Eita Horishita",
     "birth_date": "1985",
-    "current_position": "Technical Research Expert",
+    "current_position": "STI Research Specialist",
     "current_company": "VALUENEX Japan",
     "location": "Chiba, Japan",
     "github": "https://github.com/sanskruthiya",
@@ -13,7 +13,7 @@
     {
       "id": 1,
       "company": "VALUENEX Co., Ltd.",
-      "position": "Technical Research Expert",
+      "position": "STI Research Specialist",
       "department": "Co-creation Promotion Department",
       "period": "October 2018 - Present",
       "description": "Conduct analytical research utilizing big data analysis of document information. Primarily serve clients in R&D, IP, and planning departments of private companies, responsible for IP landscape analysis, technology trend analysis, whitespace exploration, and competitive/collaborative partner company research. Additionally experienced in potential social needs research through analysis of reviews and resident workshop comments. Specialize in data preprocessing, web scraping, document vector generation, and dimensionality reduction using Python, and data visualization using QGIS/JavaScript.",
