@@ -1,10 +1,31 @@
 {
   "projects": [
     {
+      "id": 5,
+      "title": "FOSS4G Hiroshima 2026",
+      "description": "Served as the PR/Communication leader of the Steering Committee for FOSS4G Hiroshima 2026, the world's largest international conference on open-source geospatial software, held August 30 - September 5, 2026 in Hiroshima, Japan. Oversaw the development and operation of the official conference website and led public relations activities. The conference welcomed over 800 participants from around the world.",
+      "technologies": [
+        "Conference Organizing",
+        "Public Relations",
+        "Web"
+      ],
+      "status": "completed",
+      "year": "2026",
+      "links": {
+        "demo": "https://2026.foss4g.org/",
+        "github": "#"
+      },
+      "image": "/images/projects/project_FOSS4G2026.webp",
+      "featured": true
+    },
+    {
       "id": 1,
       "title": "Japan Geospatial Times",
       "description": "A blog site that disseminates information about Japan's GIS historical background, projects, and use cases to the international GIS community in English. The site itself is built with open source technology, and provides a mechanism for others to contribute to article writing in markdown format. It aims to become an information hub with domestic and international GIS communities, not just information dissemination.",
-      "technologies": ["GIS", "SvelteKit"],
+      "technologies": [
+        "GIS",
+        "SvelteKit"
+      ],
       "status": "in_progress",
       "year": "2025-",
       "links": {
@@ -19,7 +40,11 @@
       "id": 2,
       "title": "Kashiwa-Tanaka Map Log",
       "description": "A map information site specialized for my residential area, created as part of civic activities (Japanese only). It provides web maps useful for daily life, such as nursery maps, disaster prevention maps, urban planning maps, and traffic accident occurrence maps, mainly utilizing open data. Through this, I practice creating a livable community through co-creation with local governments and civic organizations.",
-      "technologies": ["QGIS", "MapLibre GL JS", "LeafletJS"],
+      "technologies": [
+        "QGIS",
+        "MapLibre GL JS",
+        "LeafletJS"
+      ],
       "status": "in_progress",
       "year": "2021-",
       "links": {
@@ -33,7 +58,12 @@
       "id": 3,
       "title": "World Earthquakes Map",
       "description": "An application that feeds USGS earthquake data and displays it on a web map. Technically simple, but a site that continuously receives about 10,000 page views per month.",
-      "technologies": ["LeafletJS", "JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "LeafletJS",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "status": "completed",
       "year": "2018",
       "links": {
@@ -47,7 +77,12 @@
       "id": 4,
       "title": "ChronoGlobe",
       "description": "A digital globe that displays the current time around the world, sunrise and sunset times, and the day-night boundary line. Created for testing MapLibre GL JS's GlobeView.",
-      "technologies": ["MapLibre GL JS", "JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "MapLibre GL JS",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "status": "completed",
       "year": "2025",
       "links": {

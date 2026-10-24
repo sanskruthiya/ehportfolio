@@ -1,6 +1,21 @@
 {
   "publications": [
     {
+      "id": 6,
+      "title": "Japan Geospatial Times: Exploring the History and Use Cases of Geospatial Technologies in Japan",
+      "type": "conference_presentation",
+      "venue": "FOSS4G 2026 Hiroshima",
+      "location": "広島、日本",
+      "date": "2026年9月",
+      "description": "日本における地理空間技術の歴史・活用事例・課題について、日本の地理空間応用事例を記録するオープンソースブログ「Japan Geospatial Times」を通じて探った発表。また、本カンファレンスでは運営委員会（Steering Committee）メンバーも務めた。",
+      "links": {
+        "pdf": "/deliverables/FOSS4GHiroshima2026_Presentation_EitaHorishita.pdf",
+        "conference": "https://talks.osgeo.org/foss4g-2026/talk/XSVFVL/"
+      },
+      "tags": ["FOSS4G", "地理空間技術", "オープンソース", "日本"],
+      "featured": true
+    },
+    {
       "id": 1,
       "title": "修士論文：Application of the Geographic Information System (GIS) in developing countries",
       "type": "dissertation",

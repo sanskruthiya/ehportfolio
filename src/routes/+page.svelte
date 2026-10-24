@@ -169,7 +169,7 @@
 									</svg>
 								</a>
 							</div>
-							{#each profileData.affiliations || [] as affiliation}
+							{#each (profileData.affiliations || []).filter((a) => !a.primary) as affiliation}
 								<div class="flex justify-between">
 									<span class="text-gray-600 dark:text-gray-400">Affiliation:</span>
 									<a

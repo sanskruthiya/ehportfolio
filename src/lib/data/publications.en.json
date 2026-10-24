@@ -1,6 +1,21 @@
 {
   "publications": [
     {
+      "id": 6,
+      "title": "Japan Geospatial Times: Exploring the History and Use Cases of Geospatial Technologies in Japan",
+      "type": "conference_presentation",
+      "venue": "FOSS4G 2026 Hiroshima",
+      "location": "Hiroshima, Japan",
+      "date": "September 2026",
+      "description": "Explored Japan's geospatial technology, history, use cases, and challenges through Japan Geospatial Times, an open-source blog documenting geospatial applications in Japan. Also served as a member of the Steering Committee for this global conference.",
+      "links": {
+        "pdf": "/deliverables/FOSS4GHiroshima2026_Presentation_EitaHorishita.pdf",
+        "conference": "https://talks.osgeo.org/foss4g-2026/talk/XSVFVL/"
+      },
+      "tags": ["FOSS4G", "Geospatial Technology", "Open Source", "Japan"],
+      "featured": true
+    },
+    {
       "id": 1,
       "title": "Master's Thesis: Application of the Geographic Information System (GIS) in developing countries",
       "type": "dissertation",

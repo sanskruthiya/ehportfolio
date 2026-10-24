@@ -1,10 +1,31 @@
 {
   "projects": [
     {
+      "id": 5,
+      "title": "FOSS4G Hiroshima 2026",
+      "description": "オープンソース地理空間ソフトウェアの世界最大規模の国際会議『FOSS4G Hiroshima 2026』（2026年8月30日〜9月5日、広島）にて、運営委員会の広報・コミュニケーション担当リーダーとして、公式ウェブサイトの構築・運用および広報活動を統括しました。世界中から800名を超える参加者が集まる大会となりました。",
+      "technologies": [
+        "カンファレンス運営",
+        "広報",
+        "Web"
+      ],
+      "status": "completed",
+      "year": "2026",
+      "links": {
+        "demo": "https://2026.foss4g.org/",
+        "github": "#"
+      },
+      "image": "/images/projects/project_FOSS4G2026.webp",
+      "featured": true
+    },
+    {
       "id": 1,
       "title": "Japan Geospatial Times",
       "description": "日本のGISに関する歴史的背景やプロジェクト及びユースケースについて、英語で海外のGISコミュニティ向けに発信するブログサイトです。サイト自体をオープンソースで構築しており、記事執筆はマークダウン形式にて他の方にも貢献いただける仕組みを提供しています。また情報発信だけでなく、国内外のGISコミュニティとの情報ハブとなることを目指しています。",
-      "technologies": ["GIS", "SvelteKit"],
+      "technologies": [
+        "GIS",
+        "SvelteKit"
+      ],
       "status": "in_progress",
       "year": "2025-",
       "links": {
@@ -19,7 +40,11 @@
       "id": 2,
       "title": "柏たなかマップログ",
       "description": "市民活動の中で作成している私の居住地域に特化した地図情報サイトです（日本語のみ）。保育園マップ、防災マップ、都市計画マップ、交通事故発生箇所マップなど、主にオープンデータを活用して日常生活に役立つウェブ地図を提供しています。また、これを通じて自治体や市民団体と共創しながら住みやすい地域づくりを実践しています。",
-      "technologies": ["QGIS", "MapLibre GL JS", "LeafletJS"],
+      "technologies": [
+        "QGIS",
+        "MapLibre GL JS",
+        "LeafletJS"
+      ],
       "status": "in_progress",
       "year": "2021-",
       "links": {
@@ -33,7 +58,12 @@
       "id": 3,
       "title": "World Earthquakes Map",
       "description": "USGS地震データをフィードしてウェブ地図上に表示するアプリケーション。技術的にはシンプルだが月間1万PV程度のアクセスを継続的に受けているサイト。",
-      "technologies": ["LeafletJS", "JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "LeafletJS",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "status": "completed",
       "year": "2018",
       "links": {
@@ -47,7 +77,12 @@
       "id": 4,
       "title": "ChronoGlobe",
       "description": "世界の現在時刻、日の出・日の入り時刻、昼夜境界線を表示するデジタル地球儀。MapLibre GL JSのGlobeViewの試行用に作成したもの。",
-      "technologies": ["MapLibre GL JS", "JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "MapLibre GL JS",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "status": "completed",
       "year": "2025",
       "links": {
