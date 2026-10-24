@@ -33,8 +33,10 @@ export interface NavigationContent {
 export interface AboutContent {
 	title: string;
 	name: string;
+	name_native?: string;
 	role: string;
 	company: string;
+	affiliation?: string;
 	introduction: string;
 	brief_history: string;
 	github_url: string;
@@ -44,6 +46,7 @@ export interface AboutContent {
 export interface ExperienceContent {
 	title: string;
 	work_experience: string;
+	affiliations?: string;
 	education: string;
 	skills: string;
 	languages: string;

@@ -7,6 +7,7 @@
 	let aboutContent: AboutContent = {
 		title: 'About Me',
 		name: 'Eita Horishita',
+		name_native: '堀下 栄太',
 		role: 'Technical Research Expert',
 		company: 'VALUENEX Japan',
 		introduction: '',
@@ -39,7 +40,11 @@
 
 <svelte:head>
 	<title>{aboutContent.name} - {aboutContent.role}</title>
-	<meta name="description" content={aboutContent.introduction} />
+	<meta
+		name="description"
+		content={aboutContent.introduction ||
+			'Portfolio of Eita Horishita (堀下 栄太), specialist in STI strategy and GIS applications at VALUENEX Japan.'}
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -56,17 +61,37 @@
 		</div>
 
 		<!-- Name and Title -->
-		<h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+		<h1
+			class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white"
+			class:mb-1={aboutContent.name_native}
+			class:mb-4={!aboutContent.name_native}
+		>
 			{aboutContent.name}
 		</h1>
+
+		{#if aboutContent.name_native}
+			<p class="text-lg text-gray-500 dark:text-gray-400 mb-3">
+				{aboutContent.name_native}
+			</p>
+		{/if}
 		
 		<p class="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 mb-2">
 			{aboutContent.role}
 		</p>
 		
-		<p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+		<p
+			class="text-lg text-gray-600 dark:text-gray-400"
+			class:mb-2={aboutContent.affiliation}
+			class:mb-8={!aboutContent.affiliation}
+		>
 			{aboutContent.company}
 		</p>
+
+		{#if aboutContent.affiliation}
+			<p class="text-base text-gray-600 dark:text-gray-400 mb-8">
+				{aboutContent.affiliation}
+			</p>
+		{/if}
 
 		<!-- Social Links -->
 		<div class="flex justify-center space-x-6 mb-12">
@@ -132,8 +157,34 @@
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600 dark:text-gray-400">Company:</span>
-								<span class="text-gray-900 dark:text-white">{profileData.personal.current_company}</span>
+								<a
+									href="https://www.valuenex.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-1 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
+								>
+									{profileData.personal.current_company}
+									<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+									</svg>
+								</a>
 							</div>
+							{#each profileData.affiliations || [] as affiliation}
+								<div class="flex justify-between">
+									<span class="text-gray-600 dark:text-gray-400">Affiliation:</span>
+									<a
+										href={affiliation.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="inline-flex items-center justify-end gap-1 text-gray-900 dark:text-white text-right hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
+									>
+										{affiliation.organization}
+										<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+										</svg>
+									</a>
+								</div>
+							{/each}
 							<div class="flex justify-between">
 								<span class="text-gray-600 dark:text-gray-400">Education:</span>
 								<span class="text-gray-900 dark:text-white">{profileData.education[0].institution}</span>

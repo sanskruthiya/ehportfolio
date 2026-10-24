@@ -9,8 +9,10 @@
   "about": {
     "title": "About Me",
     "name": "Eita Horishita",
+    "name_native": "堀下 栄太",
     "role": "Specialist in STI and GIS",
     "company": "VALUENEX Japan",
+    "affiliation": "Steering Committee Member, OSGeoJP",
     "introduction": "I am a specialist in technical research for Science, Technology and Innovation (STI) strategy, with applied expertise in geospatial information systems (GIS) and urban environment management. In my current role, I focus on open innovation, technology foresight, and intellectual property landscape analysis, having led over 30 major projects for private-sector clients in areas such as autonomous mobility and decarbonization. Previously, I contributed to more than 10 international technical cooperation projects on GIS and urban infrastructure management, commissioned by organizations including JICA and the World Bank.",
     "brief_history": "After graduating from Chiba University Faculty of Engineering, I obtained a Master's degree in International Development from the University of Birmingham, UK. Currently, I work at VALUENEX Japan, engaged in technology trend analysis and strategic support services for private companies.",
     "github_url": "https://github.com/sanskruthiya",
@@ -19,6 +21,7 @@
   "experience": {
     "title": "Experience",
     "work_experience": "Work Experience",
+    "affiliations": "Affiliations & Roles",
     "education": "Education",
     "skills": "Technical Skills",
     "languages": "Languages",
